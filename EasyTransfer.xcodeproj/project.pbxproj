@@ -7,14 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		551205042426F1A9008E0949 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551205032426F1A9008E0949 /* AccountViewModel.swift */; };
+		551205072426F6F0008E0949 /* ViewController + TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551205062426F6F0008E0949 /* ViewController + TableViewDelegate.swift */; };
+		551205092426F74D008E0949 /* ViewController + TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551205082426F74D008E0949 /* ViewController + TableViewDataSource.swift */; };
+		5512050C2426FD3D008E0949 /* AccountDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5512050B2426FD3D008E0949 /* AccountDetailViewController.swift */; };
+		5512050E24270701008E0949 /* TransferResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5512050D24270701008E0949 /* TransferResultViewController.swift */; };
 		553F8B382425D5AD0072E20A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F8B372425D5AD0072E20A /* AppDelegate.swift */; };
 		553F8B3A2425D5AD0072E20A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F8B392425D5AD0072E20A /* ViewController.swift */; };
 		553F8B3D2425D5AD0072E20A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553F8B3B2425D5AD0072E20A /* Main.storyboard */; };
 		553F8B3F2425D5B70072E20A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553F8B3E2425D5B70072E20A /* Assets.xcassets */; };
 		553F8B422425D5B70072E20A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553F8B402425D5B70072E20A /* LaunchScreen.storyboard */; };
+		55655A532426EB86006B4EDC /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55655A522426EB86006B4EDC /* Account.swift */; };
+		55E67CA024270A90003CDE39 /* TransferViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E67C9F24270A90003CDE39 /* TransferViewModel.swift */; };
+		55E67CA2242721C8003CDE39 /* ViewUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E67CA1242721C8003CDE39 /* ViewUtil.swift */; };
+		55E67CA424272E74003CDE39 /* TransferResultViewController + TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E67CA324272E74003CDE39 /* TransferResultViewController + TextFieldDelegate.swift */; };
+		55E67CA624274C78003CDE39 /* HistoryTransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E67CA524274C78003CDE39 /* HistoryTransferViewController.swift */; };
+		55E67CA8242750D7003CDE39 /* HistoryTransferViewController + TableviewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E67CA7242750D7003CDE39 /* HistoryTransferViewController + TableviewDelegate.swift */; };
+		55E67CAA242750ED003CDE39 /* HistoryTransferViewController + TableviewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E67CA9242750ED003CDE39 /* HistoryTransferViewController + TableviewDataSource.swift */; };
+		55E67CB824277B7C003CDE39 /* CoreDataConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E67CB724277B7C003CDE39 /* CoreDataConnect.swift */; };
+		55E67CBB24277C81003CDE39 /* EasyTransferModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55E67CB924277C81003CDE39 /* EasyTransferModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5507809124278F9D0001AA83 /* AccountDB+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AccountDB+CoreDataClass.swift"; path = "EasyTransfer/AccountDB+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		5507809224278F9D0001AA83 /* AccountDB+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AccountDB+CoreDataProperties.swift"; path = "EasyTransfer/AccountDB+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		550780952427954A0001AA83 /* TransferDB+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransferDB+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		550780962427954A0001AA83 /* TransferDB+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransferDB+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		551205032426F1A9008E0949 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		551205062426F6F0008E0949 /* ViewController + TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + TableViewDelegate.swift"; sourceTree = "<group>"; };
+		551205082426F74D008E0949 /* ViewController + TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + TableViewDataSource.swift"; sourceTree = "<group>"; };
+		5512050B2426FD3D008E0949 /* AccountDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailViewController.swift; sourceTree = "<group>"; };
+		5512050D24270701008E0949 /* TransferResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferResultViewController.swift; sourceTree = "<group>"; };
 		553F8B342425D5AD0072E20A /* EasyTransfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyTransfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		553F8B372425D5AD0072E20A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		553F8B392425D5AD0072E20A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +45,15 @@
 		553F8B3E2425D5B70072E20A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		553F8B412425D5B70072E20A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		553F8B432425D5B70072E20A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55655A522426EB86006B4EDC /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		55E67C9F24270A90003CDE39 /* TransferViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewModel.swift; sourceTree = "<group>"; };
+		55E67CA1242721C8003CDE39 /* ViewUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtil.swift; sourceTree = "<group>"; };
+		55E67CA324272E74003CDE39 /* TransferResultViewController + TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransferResultViewController + TextFieldDelegate.swift"; sourceTree = "<group>"; };
+		55E67CA524274C78003CDE39 /* HistoryTransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTransferViewController.swift; sourceTree = "<group>"; };
+		55E67CA7242750D7003CDE39 /* HistoryTransferViewController + TableviewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryTransferViewController + TableviewDelegate.swift"; sourceTree = "<group>"; };
+		55E67CA9242750ED003CDE39 /* HistoryTransferViewController + TableviewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryTransferViewController + TableviewDataSource.swift"; sourceTree = "<group>"; };
+		55E67CB724277B7C003CDE39 /* CoreDataConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataConnect.swift; sourceTree = "<group>"; };
+		55E67CBA24277C81003CDE39 /* EasyTransferModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EasyTransferModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +67,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		551205022426F182008E0949 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				551205032426F1A9008E0949 /* AccountViewModel.swift */,
+				55E67C9F24270A90003CDE39 /* TransferViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		551205052426F620008E0949 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				551205062426F6F0008E0949 /* ViewController + TableViewDelegate.swift */,
+				551205082426F74D008E0949 /* ViewController + TableViewDataSource.swift */,
+				55E67CA324272E74003CDE39 /* TransferResultViewController + TextFieldDelegate.swift */,
+				55E67CA7242750D7003CDE39 /* HistoryTransferViewController + TableviewDelegate.swift */,
+				55E67CA9242750ED003CDE39 /* HistoryTransferViewController + TableviewDataSource.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		5512050A2426FD22008E0949 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				553F8B392425D5AD0072E20A /* ViewController.swift */,
+				55E67CA524274C78003CDE39 /* HistoryTransferViewController.swift */,
+				5512050B2426FD3D008E0949 /* AccountDetailViewController.swift */,
+				5512050D24270701008E0949 /* TransferResultViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		553F8B2B2425D5AC0072E20A = {
 			isa = PBXGroup;
 			children = (
@@ -54,14 +118,48 @@
 		553F8B362425D5AD0072E20A /* EasyTransfer */ = {
 			isa = PBXGroup;
 			children = (
+				55E67CC124278ABD003CDE39 /* CoreData */,
+				55E67CB624277B29003CDE39 /* DataModel */,
+				5512050A2426FD22008E0949 /* View */,
+				551205052426F620008E0949 /* Extension */,
+				55655A512426EB72006B4EDC /* Model */,
+				551205022426F182008E0949 /* ViewModel */,
 				553F8B372425D5AD0072E20A /* AppDelegate.swift */,
-				553F8B392425D5AD0072E20A /* ViewController.swift */,
 				553F8B3B2425D5AD0072E20A /* Main.storyboard */,
 				553F8B3E2425D5B70072E20A /* Assets.xcassets */,
 				553F8B402425D5B70072E20A /* LaunchScreen.storyboard */,
 				553F8B432425D5B70072E20A /* Info.plist */,
+				55E67CB924277C81003CDE39 /* EasyTransferModel.xcdatamodeld */,
 			);
 			path = EasyTransfer;
+			sourceTree = "<group>";
+		};
+		55655A512426EB72006B4EDC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				55655A522426EB86006B4EDC /* Account.swift */,
+				55E67CA1242721C8003CDE39 /* ViewUtil.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		55E67CB624277B29003CDE39 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				550780952427954A0001AA83 /* TransferDB+CoreDataClass.swift */,
+				550780962427954A0001AA83 /* TransferDB+CoreDataProperties.swift */,
+				5507809124278F9D0001AA83 /* AccountDB+CoreDataClass.swift */,
+				5507809224278F9D0001AA83 /* AccountDB+CoreDataProperties.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		55E67CC124278ABD003CDE39 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				55E67CB724277B7C003CDE39 /* CoreDataConnect.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +234,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				553F8B3A2425D5AD0072E20A /* ViewController.swift in Sources */,
+				55E67CA8242750D7003CDE39 /* HistoryTransferViewController + TableviewDelegate.swift in Sources */,
+				5512050E24270701008E0949 /* TransferResultViewController.swift in Sources */,
+				55E67CB824277B7C003CDE39 /* CoreDataConnect.swift in Sources */,
+				55E67CA2242721C8003CDE39 /* ViewUtil.swift in Sources */,
+				5512050C2426FD3D008E0949 /* AccountDetailViewController.swift in Sources */,
+				551205042426F1A9008E0949 /* AccountViewModel.swift in Sources */,
 				553F8B382425D5AD0072E20A /* AppDelegate.swift in Sources */,
+				55E67CA424272E74003CDE39 /* TransferResultViewController + TextFieldDelegate.swift in Sources */,
+				55655A532426EB86006B4EDC /* Account.swift in Sources */,
+				55E67CAA242750ED003CDE39 /* HistoryTransferViewController + TableviewDataSource.swift in Sources */,
+				55E67CA624274C78003CDE39 /* HistoryTransferViewController.swift in Sources */,
+				551205092426F74D008E0949 /* ViewController + TableViewDataSource.swift in Sources */,
+				551205072426F6F0008E0949 /* ViewController + TableViewDelegate.swift in Sources */,
+				55E67CBB24277C81003CDE39 /* EasyTransferModel.xcdatamodeld in Sources */,
+				55E67CA024270A90003CDE39 /* TransferViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,13 +395,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FRRLKE7G3E;
+				DEVELOPMENT_TEAM = LK28Y8ZEJN;
 				INFOPLIST_FILE = EasyTransfer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = panjianting.EasyTransfer;
+				PRODUCT_BUNDLE_IDENTIFIER = panjianting.EasyTransferTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -301,13 +413,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FRRLKE7G3E;
+				DEVELOPMENT_TEAM = LK28Y8ZEJN;
 				INFOPLIST_FILE = EasyTransfer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = panjianting.EasyTransfer;
+				PRODUCT_BUNDLE_IDENTIFIER = panjianting.EasyTransferTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -336,6 +448,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		55E67CB924277C81003CDE39 /* EasyTransferModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				55E67CBA24277C81003CDE39 /* EasyTransferModel.xcdatamodel */,
+			);
+			currentVersion = 55E67CBA24277C81003CDE39 /* EasyTransferModel.xcdatamodel */;
+			path = EasyTransferModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 553F8B2C2425D5AC0072E20A /* Project object */;
 }

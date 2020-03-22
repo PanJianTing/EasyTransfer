@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,8 +20,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds);
         self.window!.backgroundColor = UIColor.white;
-        let nav = UINavigationController(rootViewController: ViewController());
-        self.window!.rootViewController = nav;
+        
+        let tabbarController = UITabBarController();
+        
+        tabbarController.tabBar.backgroundColor = UIColor.clear;
+
+        let mainNVC = UINavigationController(rootViewController: ViewController());
+        mainNVC.tabBarItem = UITabBarItem(title: "我的帳戶", image: UIImage(named: "user"), tag: 100)
+
+        let historyNVC = UINavigationController(rootViewController: HistoryTransferViewController());
+        historyNVC.tabBarItem = UITabBarItem(title: "歷史轉帳", image: UIImage(named: "scroll"), tag: 101)
+        
+        tabbarController.viewControllers = [mainNVC, historyNVC];
+        
+        tabbarController.selectedIndex = 0;
+        
+        self.window!.rootViewController = tabbarController;
         self.window!.makeKeyAndVisible();
         
         
@@ -47,6 +62,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    
+    lazy var persistentContainer:NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "EasyTransferModel");
+        container.loadPersistentStores { (storeDescription, error) in
+            if let error = error as NSError?{
+                fatalError("Unresolved error \(error), \(error.userInfo)");
+            }
+        }
+        return container
+    }()
+    
+    lazy var coreData:CoreDataConnect = {
+        return CoreDataConnect.init(context: self.persistentContainer.viewContext);
+    }()
+    
+    // MARK: - Core Data Saving
+    func saveContext () {
+        let context = persistentContainer.viewContext
+        if context.hasChanges{
+            do{
+                try context.save();
+            }catch{
+                let error = error as NSError
+                fatalError("Unresolved error \(error), \(error.userInfo)");
+            }
+        }
     }
 
 
