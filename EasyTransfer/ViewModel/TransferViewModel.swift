@@ -14,6 +14,7 @@ class TransferViewModel: NSObject {
     var detailStr:String?
     var fromAccount:AccountViewModel!
     var toAccount:AccountViewModel!
+    var transactionTime:Date?
     
 //    public func setFromAccount(account:AccountViewModel){
 //        self.fromAccount = account;
@@ -39,6 +40,7 @@ class TransferViewModel: NSObject {
         }
         fromAccount?.getAccount().balance = fromAccount.getAccount().balance - price;
         toAccount?.getAccount().balance = toAccount.getAccount().balance + price;
+        self.transactionTime = Date();
         
         let coreData = (UIApplication.shared.delegate as! AppDelegate).coreData;
         
@@ -52,6 +54,17 @@ class TransferViewModel: NSObject {
         let format = NumberFormatter();
         format.numberStyle = .decimal;
         return "從 \(fromAccount.showName) 轉出\(format.string(from: NSNumber(value: price)) ?? "")元 到 \(toAccount.showName)";
+    }
+    
+    public func showTime() -> String?{
+        let dateFormatter = DateFormatter();
+        dateFormatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+        
+        guard let time = self.transactionTime else {
+            return nil
+        }
+        
+        return "交易時間 : \(dateFormatter.string(from: time))";
     }
 }
 

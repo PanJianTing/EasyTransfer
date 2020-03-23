@@ -9,11 +9,12 @@
     <entity name="TransferDB" representedClassName="TransferDB" syncable="YES" codeGenerationType="class">
         <attribute name="detail" optional="YES" attributeType="String"/>
         <attribute name="price" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="transactionTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="fromAccount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AccountDB"/>
         <relationship name="toAccount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AccountDB"/>
     </entity>
     <elements>
-        <element name="AccountDB" positionX="1944.359375" positionY="-1624.203125" width="128" height="103"/>
-        <element name="TransferDB" positionX="1560.890625" positionY="-1745.30859375" width="128" height="103"/>
+        <element name="AccountDB" positionX="1960.0546875" positionY="-1619" width="116.85546875" height="103"/>
+        <element name="TransferDB" positionX="1445.4375" positionY="-1657.17578125" width="128" height="118"/>
     </elements>
 </model>

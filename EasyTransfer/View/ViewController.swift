@@ -28,8 +28,12 @@ class ViewController: UIViewController {
         super.viewDidLoad();
         self.title = "我的帳戶";
         self.setTableView();
-        self.accountViewModels = (UIApplication.shared.delegate as! AppDelegate).coreData.getAccounts(queryStr: nil);
-         
+        
+        guard self.accountViewModels != nil else {
+            self.accountViewModels = (UIApplication.shared.delegate as! AppDelegate).coreData.getAccounts(queryStr: nil);
+            return;
+        }
+        
         print("Transfer Mode : \(isTransferMode)");
         
         // Do any additional setup after loading the view.ㄑ
@@ -48,6 +52,22 @@ class ViewController: UIViewController {
         self.accountTableView.allowsMultipleSelection = false;
         
         self.view.addSubview(self.accountTableView);
+    }
+    
+    // MARK:Customization Func
+    
+    func handleCanTransferAccounts(removeAccount:AccountViewModel) -> [AccountViewModel]?{
+        var canTransferAccounts:[AccountViewModel]? = [];
+        
+        guard (self.accountViewModels?.count ?? 0) > 0 else {
+            return nil
+        }
+        for accountViewModel in self.accountViewModels! {
+            if accountViewModel != removeAccount {
+                canTransferAccounts?.append(accountViewModel);
+            }
+        }
+        return canTransferAccounts
     }
 
 

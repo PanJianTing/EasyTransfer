@@ -14,9 +14,25 @@
             filePath = "EasyTransfer/CoreData/CoreDataConnect.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
-            landmarkName = "accountToAccountDB(account:_:)"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "getTransfers(queryStr:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "25DD8DFD-870E-4ECE-9A6D-9B9E5B7B3C08"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EasyTransfer/ViewModel/TransferViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "handleTransfer()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

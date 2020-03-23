@@ -19,6 +19,13 @@ class CoreDataConnect: NSObject {
     }
     
     func insertAccount(account:Account) -> Bool {
+        
+        if self.isHaveAccount(account: account) {
+            print("已經有此帳戶");
+            return false;
+        }
+        
+        
         let accountDB = NSEntityDescription.insertNewObject(forEntityName: "AccountDB", into: self.context) as! AccountDB;
         accountDB.name = account.name;
         accountDB.accountNumber = account.accountNumber;
@@ -60,6 +67,40 @@ class CoreDataConnect: NSObject {
         return accountViewModels;
     }
     
+    private func isHaveAccount(account:Account) -> Bool{
+        
+        let quertStr = "bankCode ==\(account.bankCode!) && accountNumber==\(account.accountNumber!)"
+        let result = self.getAccount(queryStr: quertStr);
+        
+        guard result != nil else {
+            return false;
+        }
+    
+        return true;
+    }
+    
+    private func getAccount(queryStr:String?) -> AccountDB?{
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "AccountDB");
+        var accountDB:AccountDB?;
+        
+        if let predicate = queryStr{
+            request.predicate = NSPredicate(format: predicate);
+        }
+        
+        do {
+            let fetchResult:[AccountDB]? =  try self.context.fetch(request) as? [AccountDB];
+            if let accountDBs = fetchResult{
+                
+                accountDB = accountDBs.first;
+            }
+            
+        } catch {
+            fatalError("\(error)")
+        }
+        
+        return accountDB;
+    }
+    
     func updateAccountBalance(updateAccount:AccountViewModel?) -> Bool {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "AccountDB");
         guard let account = updateAccount else {
@@ -91,9 +132,14 @@ class CoreDataConnect: NSObject {
         let transferDB = NSEntityDescription.insertNewObject(forEntityName: "TransferDB", into: self.context) as! TransferDB;
         transferDB.price = Int64(transferViewModel.price);
         transferDB.detail = transferViewModel.detailStr;
-        transferDB.fromAccount = self.accountToAccountDB(account: transferViewModel.fromAccount.getAccount(), transferDB.fromAccount);
-        transferDB.toAccount = self.accountToAccountDB(account: transferViewModel.toAccount.getAccount(), transferDB.toAccount);
+        transferDB.transactionTime = transferViewModel.transactionTime;
         
+        let fromAccountQueryStr = "bankCode ==\(transferViewModel.fromAccount.getAccount().bankCode!) && accountNumber==\(transferViewModel.fromAccount.getAccount().accountNumber!)"
+        
+        let toAccountQueryStr = "bankCode ==\(transferViewModel.toAccount.getAccount().bankCode!) && accountNumber==\(transferViewModel.toAccount.getAccount().accountNumber!)"
+        
+        transferDB.fromAccount = self.getAccount(queryStr: fromAccountQueryStr);
+        transferDB.toAccount = self.getAccount(queryStr: toAccountQueryStr);
         do{
             try self.context.save();
         }catch{
@@ -110,6 +156,8 @@ class CoreDataConnect: NSObject {
             request.predicate = NSPredicate(format: predicate);
         }
         
+        request.sortDescriptors = [NSSortDescriptor(key: "transactionTime", ascending: false)]
+        
         do {
             let fetchResult:[TransferDB]? =  try self.context.fetch(request) as? [TransferDB];
             if let transferDBs = fetchResult{
@@ -120,6 +168,7 @@ class CoreDataConnect: NSObject {
                     transferViewModel.price = Int(transferDB.price);
                     transferViewModel.fromAccount = self.accountDBToAccountViewModel(accountDB: transferDB.fromAccount!);
                     transferViewModel.toAccount = self.accountDBToAccountViewModel(accountDB: transferDB.toAccount!);
+                    transferViewModel.transactionTime = transferDB.transactionTime;
                     
                     transferViewModels.append(transferViewModel);
                 }

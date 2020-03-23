@@ -38,6 +38,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.rootViewController = tabbarController;
         self.window!.makeKeyAndVisible();
         
+        print(self.coreData.insertAccount(account: panTSAccount));
+        print(self.coreData.insertAccount(account: panUFAccount));
+        print(self.coreData.insertAccount(account: panHNAccount));
+        
         
         return true
     }

@@ -53,4 +53,4 @@ class AccountViewModel: NSObject {
 //    AccountViewModel(account: panUFAccount)
 //]
 
-var canTransferAccountModels:[AccountViewModel] = [];
+//var canTransferAccountModels:[AccountViewModel] = [];

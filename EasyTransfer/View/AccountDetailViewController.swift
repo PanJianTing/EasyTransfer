@@ -24,6 +24,8 @@ class AccountDetailViewController: UIViewController {
     var navigationBarHeight : CGFloat! {
         return ViewUtil.getNavigationHeight(navigationViewController: self.navigationController);
     }
+    
+    var canTransferAccountModels:[AccountViewModel]!;
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +36,8 @@ class AccountDetailViewController: UIViewController {
         setAccountLabel();
         setBalanceLabel();
         
-        let queryStr = "bankCode !=\(accountViewModel.getAccount().bankCode!) && accountNumber!=\(String(describing: accountViewModel.getAccount().accountNumber!))"
-        canTransferAccountModels = (UIApplication.shared.delegate as! AppDelegate).coreData.getAccounts(queryStr: queryStr);
+//        let queryStr = "bankCode !=\(accountViewModel.getAccount().bankCode!) && accountNumber!=\(String(describing: accountViewModel.getAccount().accountNumber!))"
+//        canTransferAccountModels = (UIApplication.shared.delegate as! AppDelegate).coreData.getAccounts(queryStr: queryStr);
 
         // Do any additional setup after loading the view.
     }
@@ -83,6 +85,7 @@ class AccountDetailViewController: UIViewController {
         nextViewController.isTransferMode = true
         transferViewModel.fromAccount = self.accountViewModel;
         nextViewController.transferViewModel = transferViewModel;
+        nextViewController.accountViewModels = canTransferAccountModels;
         self.navigationController?.pushViewController(nextViewController, animated: true);
         
     }

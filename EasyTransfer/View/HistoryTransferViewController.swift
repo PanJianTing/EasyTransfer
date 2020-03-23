@@ -26,11 +26,11 @@ class HistoryTransferViewController: UIViewController {
         super.viewDidLoad()
         self.title = "歷史轉帳";
         self.setTableView();
-        self.transferViewModels = (UIApplication.shared.delegate as! AppDelegate).coreData.getTransfers(queryStr: nil);
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        self.transferViewModels = (UIApplication.shared.delegate as! AppDelegate).coreData.getTransfers(queryStr: nil);
         self.historyTransferTableView.reloadData();
     }
     

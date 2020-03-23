@@ -31,8 +31,6 @@
 /* Begin PBXFileReference section */
 		5507809124278F9D0001AA83 /* AccountDB+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AccountDB+CoreDataClass.swift"; path = "EasyTransfer/AccountDB+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		5507809224278F9D0001AA83 /* AccountDB+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AccountDB+CoreDataProperties.swift"; path = "EasyTransfer/AccountDB+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		550780952427954A0001AA83 /* TransferDB+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransferDB+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		550780962427954A0001AA83 /* TransferDB+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransferDB+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		551205032426F1A9008E0949 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		551205062426F6F0008E0949 /* ViewController + TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + TableViewDelegate.swift"; sourceTree = "<group>"; };
 		551205082426F74D008E0949 /* ViewController + TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + TableViewDataSource.swift"; sourceTree = "<group>"; };
@@ -46,6 +44,8 @@
 		553F8B412425D5B70072E20A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		553F8B432425D5B70072E20A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55655A522426EB86006B4EDC /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		558DD75624288B9A00881D9B /* TransferDB+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransferDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		558DD75724288B9A00881D9B /* TransferDB+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransferDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		55E67C9F24270A90003CDE39 /* TransferViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewModel.swift; sourceTree = "<group>"; };
 		55E67CA1242721C8003CDE39 /* ViewUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtil.swift; sourceTree = "<group>"; };
 		55E67CA324272E74003CDE39 /* TransferResultViewController + TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransferResultViewController + TextFieldDelegate.swift"; sourceTree = "<group>"; };
@@ -146,8 +146,8 @@
 		55E67CB624277B29003CDE39 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				550780952427954A0001AA83 /* TransferDB+CoreDataClass.swift */,
-				550780962427954A0001AA83 /* TransferDB+CoreDataProperties.swift */,
+				558DD75624288B9A00881D9B /* TransferDB+CoreDataClass.swift */,
+				558DD75724288B9A00881D9B /* TransferDB+CoreDataProperties.swift */,
 				5507809124278F9D0001AA83 /* AccountDB+CoreDataClass.swift */,
 				5507809224278F9D0001AA83 /* AccountDB+CoreDataProperties.swift */,
 			);

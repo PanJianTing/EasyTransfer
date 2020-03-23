@@ -16,11 +16,14 @@ extension ViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         if(!self.isTransferMode){
             let nextViewController = AccountDetailViewController();
-            nextViewController.accountViewModel = accountViewModels![indexPath.row];
+            let accountViewModel = accountViewModels![indexPath.row];
+            nextViewController.accountViewModel = accountViewModel;
+            nextViewController.canTransferAccountModels = self.handleCanTransferAccounts(removeAccount:accountViewModel)
+            
             self.navigationController?.pushViewController(nextViewController, animated: true);
         }else{
             let nextViewController = TransferResultViewController();
-            self.transferViewModel?.toAccount = canTransferAccountModels[indexPath.row];
+            self.transferViewModel?.toAccount = accountViewModels![indexPath.row];
             nextViewController.transferViewModel = self.transferViewModel
             self.navigationController?.pushViewController(nextViewController, animated: true);
         }

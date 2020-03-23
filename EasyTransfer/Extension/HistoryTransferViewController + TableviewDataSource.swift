@@ -21,13 +21,16 @@ extension HistoryTransferViewController: UITableViewDataSource {
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell", for: indexPath) as UITableViewCell;
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell", for: indexPath) as UITableViewCell;
+            
+            let cell:UITableViewCell? = UITableViewCell(style: .subtitle, reuseIdentifier: "HistoryCell");
             
 //            let cell:UITableViewCell? = UITableViewCell(style: .subtitle, reuseIdentifier: "HistoryCell");
 
-            cell.textLabel?.text = transferViewModels?[indexPath.row].showTransferDetail();
+            cell?.textLabel?.text = transferViewModels?[indexPath.row].showTransferDetail();
+            cell?.detailTextLabel?.text = transferViewModels?[indexPath.row].showTime() ?? "";
             
-            return cell
+            return cell!
         }
 
 }
