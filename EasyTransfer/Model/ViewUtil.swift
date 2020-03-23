@@ -11,7 +11,14 @@ import UIKit
 class ViewUtil: NSObject {
     
     static func getFullScreenSize(vc:UIViewController) -> CGSize{
-        let size = CGSize(width: vc.view.frame.size.width, height: vc.view.frame.size.height - (vc.tabBarController?.tabBar.frame.size.height ?? 0) )
+        
+        var tabberHeight = vc.tabBarController?.tabBar.frame.size.height
+        
+        if (vc.tabBarController?.tabBar.isHidden)!{
+            tabberHeight = 0;
+        }
+        
+        let size = CGSize(width: vc.view.frame.size.width, height: vc.view.frame.size.height - (tabberHeight ?? 0) )
         return size;
     }
     

@@ -22,6 +22,7 @@ class HistoryTransferViewController: UIViewController {
     
     var transferViewModels:[TransferViewModel]?;
     
+    // MARK:View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "歷史轉帳";
@@ -29,7 +30,9 @@ class HistoryTransferViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
     override func viewDidAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false;
         self.transferViewModels = (UIApplication.shared.delegate as! AppDelegate).coreData.getTransfers(queryStr: nil);
         self.historyTransferTableView.reloadData();
     }

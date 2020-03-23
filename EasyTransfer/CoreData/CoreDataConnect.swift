@@ -200,8 +200,6 @@ class CoreDataConnect: NSObject {
                               accountNumber: accountDB.accountNumber!,
                               balance: Int(accountDB.balance))
         
-        
-        
         return AccountViewModel(account: account);
     }
     

@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     var transferViewModel:TransferViewModel?
     var accountViewModels:[AccountViewModel]?
     
+    // MARK: View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad();
         self.title = "我的帳戶";
@@ -36,7 +37,16 @@ class ViewController: UIViewController {
         
         print("Transfer Mode : \(isTransferMode)");
         
+        
         // Do any additional setup after loading the view.ㄑ
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if isTransferMode {
+            self.title = "轉給"
+            return;
+        }
+        self.tabBarController?.tabBar.isHidden = false;
     }
     
     // MARK:Set View Component

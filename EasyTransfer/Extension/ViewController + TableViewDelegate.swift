@@ -21,6 +21,7 @@ extension ViewController: UITableViewDelegate {
             nextViewController.canTransferAccountModels = self.handleCanTransferAccounts(removeAccount:accountViewModel)
             
             self.navigationController?.pushViewController(nextViewController, animated: true);
+            self.tabBarController?.tabBar.isHidden = true;
         }else{
             let nextViewController = TransferResultViewController();
             self.transferViewModel?.toAccount = accountViewModels![indexPath.row];

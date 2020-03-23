@@ -27,6 +27,8 @@ class TransferResultViewController: UIViewController {
     var confirmButton:UIButton!
     
     
+    
+    // MARK: View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = self.transferViewModel.showToAccountStr();
@@ -43,6 +45,7 @@ class TransferResultViewController: UIViewController {
     }
 
     
+    // MARK: View Component
     private func setConfirmButton(){
         self.confirmButton =  UIButton(frame: CGRect(x: 20, y: fullScreenSize.height-70, width: fullScreenSize.width-40, height: 40));
         self.confirmButton.setTitle("確定", for: .normal)
