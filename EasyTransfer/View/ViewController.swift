@@ -27,7 +27,12 @@ class ViewController: UIViewController {
     // MARK: View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad();
-        self.title = "我的帳戶";
+        if isTransferMode {
+            self.title = "轉給"
+        }else{
+            self.title = "我的帳戶";
+        }
+        
         self.setTableView();
         
         guard self.accountViewModels != nil else {
@@ -41,12 +46,16 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.ㄑ
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        if isTransferMode {
-            self.title = "轉給"
+    override func viewDidAppear(_ animated: Bool) {
+        if isTransferMode{
             return;
         }
         self.tabBarController?.tabBar.isHidden = false;
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+//        self.tabBarController?.tabBar.isHidden = false;
     }
     
     // MARK:Set View Component
