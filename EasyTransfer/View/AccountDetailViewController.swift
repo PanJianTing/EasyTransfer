@@ -36,18 +36,17 @@ class AccountDetailViewController: UIViewController {
         setAccountLabel();
         setBalanceLabel();
         
-//        let queryStr = "bankCode !=\(accountViewModel.getAccount().bankCode!) && accountNumber!=\(String(describing: accountViewModel.getAccount().accountNumber!))"
-//        canTransferAccountModels = (UIApplication.shared.delegate as! AppDelegate).coreData.getAccounts(queryStr: queryStr);
 
         // Do any additional setup after loading the view.
     }
     
     // MARK:Setting View Component
     private func setTransferButton(){
-        self.transferButton =  UIButton(frame: CGRect(x: 20, y: fullScreenSize.height-70, width: fullScreenSize.width-40, height: 40));
+        self.transferButton = UIButton(frame: CGRect(x: 20, y: fullScreenSize.height-70, width: fullScreenSize.width-40, height: 40));
         self.transferButton.setTitle("轉帳", for: .normal)
         self.transferButton.setTitleColor(UIColor.white, for: .normal);
-        self.transferButton.backgroundColor = UIColor.blue;
+        self.transferButton.backgroundColor = ButtonColor;
+        self.transferButton.layer.cornerRadius = 20;
         self.transferButton.addTarget( self, action: #selector(clickTransferButton), for:.touchUpInside)
         self.view.addSubview(self.transferButton);
     }

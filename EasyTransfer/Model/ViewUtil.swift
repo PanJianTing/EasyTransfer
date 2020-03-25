@@ -8,6 +8,8 @@
 
 import UIKit
 
+public let ButtonColor = UIColor.init(red: 0.0/255, green: 114.0/255, blue: 153.0/255, alpha: 1);
+
 class ViewUtil: NSObject {
     
     static func getFullScreenSize(vc:UIViewController) -> CGSize{

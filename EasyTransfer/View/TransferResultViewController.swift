@@ -50,7 +50,8 @@ class TransferResultViewController: UIViewController {
         self.confirmButton =  UIButton(frame: CGRect(x: 20, y: fullScreenSize.height-70, width: fullScreenSize.width-40, height: 40));
         self.confirmButton.setTitle("確定", for: .normal)
         self.confirmButton.setTitleColor(UIColor.white, for: .normal);
-        self.confirmButton.backgroundColor = UIColor.blue;
+        self.confirmButton.backgroundColor = ButtonColor;
+        self.confirmButton.layer.cornerRadius = 20;
         self.confirmButton.addTarget( self, action: #selector(clickConfirmButton), for:.touchUpInside)
         self.view.addSubview(self.confirmButton);
     }
