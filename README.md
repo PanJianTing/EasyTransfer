@@ -5,4 +5,4 @@
 能夠在App上管理自己的帳戶，把能夠查詢明細、餘額、並相互轉帳。
 而不會再到銀行的App內轉帳。
 
-請參考Demo影片：https://github.com/PanJianTing/EasyTransfer
+請參考Demo影片：https://www.youtube.com/watch?v=fC5ueenTdDk
